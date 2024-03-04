@@ -1,0 +1,477 @@
+@font-face {
+    font-family: "Steinbeck";
+    src: url(./imgs/SteinbeckRegular.2ddad8b.ttf);
+}
+
+@font-face {
+    font-family: "Love";
+    src: url(./imgs/Love-Regular.1e9f7e9.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Steinbeck";
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+body{
+    background-color: #000;
+}
+
+
+.back {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    background-image: url(./imgs/bg.png);
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+.scene canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.nav{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.678);
+    backdrop-filter: blur(10px);
+}
+
+.nav a{
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+.nav a:nth-child(1){
+    margin-left: 0px;
+}
+
+.nav img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.ovr{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    /* background-color: red; */
+}
+
+.ovr h1{
+    font-size: 150px;
+    text-transform: uppercase;
+    font-family: "love";
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    line-height: 130px;
+}
+
+.ovr span{
+    font-size: 80px;
+    margin: 0 30px;
+    color: red;
+}
+
+.ovr p{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    opacity: .6;
+    font-weight: 100;
+}
+
+.circle{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    /* background-color: rgb(38, 0, 255); */
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: anim 12s linear infinite both;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.circle img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.mini{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30px;
+    height: 30px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.3s;
+    background-color: red;
+    border-radius: 50%;
+}
+
+
+.circle:hover .mini{
+    width: 80px;
+    height: 80px;
+    background-image: url(./imgs/bg.png);
+    background-size: 430px 430px;
+    background-position: center;
+}
+
+@keyframes anim {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: #fff;
+    padding: 30px;
+}
+
+.leftabt{
+    position: relative;
+    width: 45%;
+    min-height: inherit;
+}
+
+.leftabt h1{
+    font-size: 39px;
+}
+
+.leftabt .prlx{
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 70%;
+    height: 90px;
+    background-image: url(./imgs/bg.png);
+    background-attachment: fixed;
+}
+
+.rightabt{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    width: 45%;
+    min-height: inherit;
+}
+
+.rightabt p{
+    margin-top: 30px;
+    line-height: 20px;
+    font-size: 17px;
+}
+
+.leftrt{
+    width: 45%;
+}
+
+.rightrt{
+    width: 45%;
+}
+
+.hof{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    padding-top: 100px;
+    text-align: center;
+}   
+
+.hof img{
+    margin-bottom: 30px;
+}
+
+.hof h1{
+    text-transform: uppercase;
+    font-family: "Love";
+    font-size: 200px;
+    font-weight: 100;
+    margin-top: 30px;
+}
+
+.para{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.para p{
+    width: 25%;
+    text-align: left;
+    margin-left: 40px;
+    opacity: .6;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.timeline{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #000;
+}
+
+.row1{
+    width: 40%;
+    min-height: inherit;
+    color: #fff;
+    /* background-color: red; */
+}
+
+
+
+.row1 h1, .row2 h1{
+    font-size: 35px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.row1 h1 span, .row2 h1 span{
+    margin-top: 4px;
+    margin-left: 12px;
+    font-size: 11px;
+    color: #a79999;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.banner{
+    width: 100%;
+    height: 400px;
+    margin: 30px 0;
+    background-image: url(https://images.unsplash.com/photo-1682685797088-283404e24b9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+.row1 h2, .row2 h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.row1 h4, .row2 h4{
+    color: #a79999;
+    font-weight: 100;
+}
+
+.row1 .line, .row2 .line{
+    width: 100%;
+    height: 2px;
+    background-color: #a79999;
+    margin-top: 40px;
+}
+
+.row2{
+    width: 40%;
+    min-height: inherit;
+    color: #fff;
+}
+
+.row2 .elem{
+    margin-top: 50px;
+}
+
+.row3{
+    width: 17%;
+    min-height: inherit;
+    color: #fff;
+    text-align: end;
+}
+
+.row3 h1{
+    font-size: 70px;
+    font-family: "Love";
+}
+
+
+
+@media(max-width: 550px) {
+    .nav {
+      padding: 0 20px;
+      background-color: rgba(0, 0, 0, 0.197) !important;
+      backdrop-filter: blur(5px);
+    }
+  
+    .nav .left {
+      display: none;
+    }
+  
+    .nav .right {
+      display: none;
+    }
+  
+    .scene {
+      width: 100%;
+      height: initial;
+    }
+  
+    canvas {
+      height: 100%;
+      width: initial;
+    }
+  
+     .ovr {
+      pointer-events: all;
+      padding-top: 130px;
+    } 
+  
+    .ovr h1 {
+      font-size: 50px;
+      line-height: 55px;
+    }
+  
+    .ovr h1 span {
+      font-size: 30px;
+      margin: 0 10px !important;
+      margin-top: 0px;
+    }
+  
+    .ovr p {
+      font-size: 12px;
+      width: 65%;
+      margin-top: 20px !important;
+      margin: 0 auto;
+    }
+
+    .circle {
+        margin-top: 60px;
+    }
+
+
+    .leftabt h1 {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-top: -83px;
+    }
+  
+    .about {
+        padding: 30px 0px;
+        min-height: 10vh;
+        flex-direction: column;
+      }
+
+      .leftrt {
+        width: 100%;
+    }
+    
+      .leftabt {
+        width: 100%;
+        padding-left: 15px;
+      }
+    
+
+      .rightrt {
+        width: 101%;
+    }
+      .leftabt .prlx {
+        position: static;
+        width: 80%;
+        height: 100px;
+        margin-top: 50px;
+      }
+    
+      .rightabt {
+        width: 100%;
+        padding: 0 15px;
+        flex-direction: column;
+      }
+    
+      .rightabt h1 {
+        width: 100%;
+        margin-top: 100px;
+      }
+
+      .hof {
+        padding-top: 10px;
+      }
+    
+      .hof p {
+        font-size: 17px;
+        margin: 15px 0 30px 0;
+      }
+    
+      .hof h1 {
+        line-height: 150px;
+        font-size: 150px;
+      }
+
+      .timeline{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .row1{
+        width: 100%;
+      }
+
+      .row2{
+        width: 100%;
+      }
+
+      .row3{
+        width: 100%;
+        min-height: initial;
+        
+      }
+
+      .row3 h1{
+        text-align: center;
+        
+      }
+
+      .para{
+        display: none;
+      }
+  }
